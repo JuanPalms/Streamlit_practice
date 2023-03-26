@@ -40,3 +40,27 @@ def a_progress_bar():
 with st.spinner("Something is procerssing ..."):
     my_bar3 = st.progress(0)
     a_progress_bar()
+
+st.markdown("---")
+### Info 
+st.subheader("st.info")
+st.info("This is information message in primary format")
+
+st.markdown("---")
+## Success
+st.subheader("Success message")
+st.success("This is success message")
+
+st.markdown("---")
+## Warning
+st.subheader("st.warning")
+st.warning("This is a warning message")
+
+st.markdown("---")
+## Error
+st.header("st.error")
+st.error("This is an error message")
+
+time.sleep(2)
+### displaying ballons
+st.balloons()
