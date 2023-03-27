@@ -67,4 +67,48 @@ with col3:
     st.dataframe(df[[select_column]])
 
 
+### Adds expander layout. Can hold multiple elements
 
+
+st.markdown("----") 
+
+st.header("Expander usage: st.expander")
+
+with st.expander("Some explanation about expander"):
+    st.write("""
+        This inserts a container into your app tha can be used to hold multiple elements and 
+        can be expanded or collapsed by the user. When collapsed, all that is visible 
+        is the label.
+        """)
+    st.code("""
+        # You can create a snippet of code hidden in the expander layout
+    import pandas as
+    import numpy as np
+
+    d = {'col1': [1, 2], 'col2': [3, 4]}
+    df = pd.DataFrame(data=d)
+    """, language="python")
+
+## Using containers
+
+st.header("Container: st.container")
+with st.container():
+    st.write("You are inside the container")
+    st.markdown("---")
+    st.code("""
+    # you can host multiple elements in the container
+    import numpy as np
+    y = np.arange(3, dtype=float)
+    y
+    """)
+## Empty 
+## Can hold a single element for a period of time and then 
+# clear that element
+st.markdown("---")
+st.header("Empy: st.empty")
+
+placeholder = st.empty()
+for i in range(10):
+    placeholder.write("This message will dissapear in {} seconds".format(11-i))
+    time.sleep(1)
+placeholder.empty()
