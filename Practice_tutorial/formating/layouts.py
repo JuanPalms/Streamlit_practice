@@ -48,6 +48,23 @@ st.markdown("---")
 st.dataframe(df[[select_column]])
 
 
+st.markdown("---")
+
+st.header('Columns: st.columns')
+#Create 3 columns
+col1, col2, col3 = st.columns(3)
+# in order to insert digits in the columns
+with col1:
+    st.subheader('Column 1')
+    st.image("Practice_tutorial/formating/image.jpg")
+
+with col2:
+    st.subheader('Column 2')
+    st.dataframe(data=df)
+
+with col3: 
+    st.subheader("Column 3")
+    st.dataframe(df[[select_column]])
 
 
 
