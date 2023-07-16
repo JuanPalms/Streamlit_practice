@@ -1,0 +1,23 @@
+# environments.yml
+name: streamlit-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - scikit-learn
+  - pandas
+  - numpy
+  - pytest
+  - ipython
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - seaborn
+  - plotly
+  - pylint
+  - streamlit
+  - altair
+  - bokeh
+  - pillow
+  - opencv
