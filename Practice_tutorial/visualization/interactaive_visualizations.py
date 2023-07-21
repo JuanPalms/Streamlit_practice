@@ -47,13 +47,18 @@ with st.container():
                          ('sex','day','time'))
     fig = px.histogram(data, x="total_bill", color=select_color, title="Total bill count")
     st.plotly_chart(fig)
-with st.container():
     st.markdown('----')
     st.write("4) Draw scatter plot between total_bill and tips and color by (sex, smoker, day, time)")
     color_option= st.selectbox('Select a category do you want to graph by', 
                                ('sex','day','time'))
     fig = px.scatter(data, x="total_bill", y="tip", color=color_option, title="Total bill count")
     st.plotly_chart(fig)
+    st.markdown('----')
+    st.write("5) Sunburst Chart on features (sex, smoker, day, time)")
+    path = st.multiselect('select the categorical features path',('sex','day', 'smoker','time'))
+    fig = px.sunburst(data_frame = data, path=path)
+    st.plotly_chart(fig)
+
 
 
     
