@@ -161,8 +161,14 @@ with st.container():
 
 
 #4) Find the relation between total_bill and tip on time (scatter plot)
+st.markdown("-----")
 st.markdown("scatter plot")
-
+with st.container():
+    st.write("Find the relation between total_bill and tip on time (scatter plot)")
+    fig, ax = plt.subplots()
+    hue_type = st.selectbox('Select the feature to hue', cat_cols)
+    sns.scatterplot(x='total_bill',y='tip',hue=hue_type,ax=ax, data=data)
+    st.pyplot(fig)
 
 
 
